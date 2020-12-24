@@ -48,27 +48,30 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="509,353" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="509,391" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,261" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.mercadobitcoin.com.br">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,299" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.mercadobitcoin.com.br">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,160" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="strPrecoBitcoin" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetValue ContinueOnError="{x:Null}" Value="{x:Null}" DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="GetValue_1">
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
               <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="14d981a1-ea9e-4b40-bb32-c77f8a4df62b">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c401f1b2-b023-46cc-b172-b7a0eac8000f" InformativeScreenshot="4f3d815519df5c7f9e7d978f1fdefad6" Selector="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='2' isleaf='1' tag='P' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -77,6 +80,9 @@
                   </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[strPrecoBitcoin]</OutArgument>
+              </ui:GetValue.Value>
             </ui:GetValue>
           </Sequence>
         </ActivityAction>
